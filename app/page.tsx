@@ -27,7 +27,7 @@ export default function Home() {
 
     try {
       // Consider calling your Next.js route: fetch("/api/process", {...})
-      const res = await fetch("http://localhost:8000/api/process", {
+      const res = await fetch("/api/process", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url, user_prompt: prompt }),

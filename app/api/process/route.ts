@@ -7,6 +7,8 @@ export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as ProcessBody;
 
+    console.log("BACKEND_BASE:", process.env.BACKEND_BASE);
+
     const base = (process.env.BACKEND_BASE || "http://localhost:8000").replace(/\/$/, "");
 
     const r = await fetch(`${base}/api/process`, {
